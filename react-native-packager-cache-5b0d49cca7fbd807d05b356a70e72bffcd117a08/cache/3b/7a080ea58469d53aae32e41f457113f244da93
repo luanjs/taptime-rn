@@ -1,0 +1,17 @@
+/*! @license Firebase v4.3.0
+Build: rev-bd8265e
+Terms: https://firebase.google.com/terms/ */
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var Hash = function () {
+  function Hash() {
+    this.blockSize = -1;
+  }
+  return Hash;
+}();
+exports.Hash = Hash;

@@ -1,0 +1,6 @@
+export * from "./Bloco"
+export * from "./Game"
+export * from "./Resultado"
+export * from "./Topo"
+export * from "./Ranking"
+export * from "./ListaJogadores"

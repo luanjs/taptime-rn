@@ -1,0 +1,154 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Resultado = undefined;
+var _jsxFileName = "/home/luan/native/taptime/src/components/Resultado.js";
+
+var _react = require("react");
+
+var _react2 = babelHelpers.interopRequireDefault(_react);
+
+var _firebase = require("firebase");
+
+var _firebase2 = babelHelpers.interopRequireDefault(_firebase);
+
+var _reactNative = require("react-native");
+
+var _reactNativeRouterFlux = require("react-native-router-flux");
+
+var _reactNativeRouterFlux2 = babelHelpers.interopRequireDefault(_reactNativeRouterFlux);
+
+var Resultado = function (_Component) {
+  babelHelpers.inherits(Resultado, _Component);
+
+  function Resultado(props) {
+    babelHelpers.classCallCheck(this, Resultado);
+
+    var _this = babelHelpers.possibleConstructorReturn(this, (Resultado.__proto__ || Object.getPrototypeOf(Resultado)).call(this, props));
+
+    _this.state = { nome: "" };
+    return _this;
+  }
+
+  babelHelpers.createClass(Resultado, [{
+    key: "componentWillMount",
+    value: function componentWillMount() {
+      var config = {
+        apiKey: "AIzaSyAaAeDHJpCpc-t-TqZva-fAWeEVEzs8JfQ",
+        authDomain: "taptime-1b841.firebaseapp.com",
+        databaseURL: "https://taptime-1b841.firebaseio.com",
+        projectId: "taptime-1b841",
+        storageBucket: "taptime-1b841.appspot.com",
+        messagingSenderId: "595569611792"
+      };
+      if (!_firebase2.default.apps.length) {
+        _firebase2.default.initializeApp(config);
+      }
+    }
+  }, {
+    key: "salva",
+    value: function salva() {
+      jogadores = _firebase2.default.database().ref("jogadores");
+      jogadores.push().set({
+        nome: this.state.nome,
+        toques: this.props.toques
+      });
+
+      this.props.onBack();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return _react2.default.createElement(
+        _reactNative.View,
+        { style: style.content, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 42
+          }
+        },
+        _react2.default.createElement(
+          _reactNative.View,
+          { style: style.contentInfo, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 43
+            }
+          },
+          _react2.default.createElement(
+            _reactNative.Text,
+            { style: style.txtToques, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 44
+              }
+            },
+            " Voc\xEA deu ",
+            this.props.toques,
+            " toques!"
+          ),
+          _react2.default.createElement(_reactNative.TextInput, {
+            style: style.txtInputNome,
+            placeholderTextColor: "white",
+            placeholder: "Seu Nome",
+            value: this.state.nome,
+            onChangeText: function onChangeText(txt) {
+              _this2.setState({ nome: txt });
+            },
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 45
+            }
+          }),
+          _react2.default.createElement(
+            _reactNative.View,
+            { style: style.btnSalvar, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 53
+              }
+            },
+            _react2.default.createElement(_reactNative.Button, { title: "Salvar", onPress: function onPress() {
+                _this2.salva();
+              }, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 54
+              }
+            })
+          )
+        )
+      );
+    }
+  }]);
+  return Resultado;
+}(_react.Component);
+
+var style = _reactNative.StyleSheet.create({
+  content: {
+    backgroundColor: "#212121",
+    flex: 1,
+    alignItems: "center"
+  },
+
+  txtToques: {
+    fontSize: 25,
+    color: "white"
+  },
+
+  txtInputNome: {
+    marginTop: 20,
+    alignSelf: "stretch",
+    textAlign: "center",
+    color: "white"
+  },
+
+  contentInfo: {
+    paddingTop: 50,
+    alignItems: "center"
+  },
+
+  btnSalvar: {
+    marginTop: 20,
+    width: 100
+  }
+});
+
+exports.Resultado = Resultado;

@@ -1,0 +1,18 @@
+/*! @license Firebase v4.3.0
+Build: rev-bd8265e
+Terms: https://firebase.google.com/terms/ */
+
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+require('./utils/shims');
+
+var _firebase_app = require('./app/firebase_app');
+
+var firebase = (0, _firebase_app.createFirebaseNamespace)();
+
+exports.default = firebase;
+module.exports = exports['default'];

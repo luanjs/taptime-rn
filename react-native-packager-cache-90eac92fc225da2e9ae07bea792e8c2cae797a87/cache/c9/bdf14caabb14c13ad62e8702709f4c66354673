@@ -1,0 +1,37 @@
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Ranking = undefined;
+var _jsxFileName = "/home/luan/native/taptime/src/components/Ranking.js";
+
+var _react = require("react");
+
+var _react2 = babelHelpers.interopRequireDefault(_react);
+
+var _reactNative = require("react-native");
+
+var _components = require("../components");
+
+var Ranking = function (_Component) {
+    babelHelpers.inherits(Ranking, _Component);
+
+    function Ranking() {
+        babelHelpers.classCallCheck(this, Ranking);
+        return babelHelpers.possibleConstructorReturn(this, (Ranking.__proto__ || Object.getPrototypeOf(Ranking)).apply(this, arguments));
+    }
+
+    babelHelpers.createClass(Ranking, [{
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(_components.ListaJogadores, {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 9
+                }
+            });
+        }
+    }]);
+    return Ranking;
+}(_react.Component);
+
+exports.Ranking = Ranking;

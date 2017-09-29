@@ -1,0 +1,51 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _jsxFileName = '/home/luan/native/taptime/index.android.js';
+
+var _react = require('react');
+
+var _react2 = babelHelpers.interopRequireDefault(_react);
+
+var _reactNative = require('react-native');
+
+var _reactNativeRouterFlux = require('react-native-router-flux');
+
+var _Rotas = require('./src/Rotas.js');
+
+var _Rotas2 = babelHelpers.interopRequireDefault(_Rotas);
+
+var taptime = function (_Component) {
+  babelHelpers.inherits(taptime, _Component);
+
+  function taptime() {
+    babelHelpers.classCallCheck(this, taptime);
+    return babelHelpers.possibleConstructorReturn(this, (taptime.__proto__ || Object.getPrototypeOf(taptime)).apply(this, arguments));
+  }
+
+  babelHelpers.createClass(taptime, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(_Rotas2.default, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        }
+      });
+    }
+  }]);
+  return taptime;
+}(_react.Component);
+
+exports.default = taptime;
+
+
+var style = _reactNative.StyleSheet.create({
+  container: {
+    flex: 1
+  }
+});
+
+_reactNative.AppRegistry.registerComponent('taptime', function () {
+  return taptime;
+});
